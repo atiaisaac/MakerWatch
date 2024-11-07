@@ -19,7 +19,7 @@ Outlined below is a breakdown of the hardware componenets considered for this de
 * __MAXM86146__ complete biometric sensor hub - a wrist-based heart rate monitoring and pulse oximetry. All computations are done on device freeing the MCU to perform other tasks.
 * __FIREFLY E2218__ true green color for health monitoring i.e HRM and pulse oximetry
 * __SFH 7015__ hyper-red and infrared for HRM and pulse oximetry
-* 1.28'' round tft display
+* 1.28'' round tft display with __GC9a01__ display driver
 * __RV-8523-C3__ crystal to serve as real time clock/calendar
 * __USB-C__ interface for easy flashing of firmware
 
