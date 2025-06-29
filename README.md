@@ -1,5 +1,5 @@
 # MakerWatch
-![Image](https://github.com/atiaisaac/MakerWatch/blob/main/images/Screenshot%20from%202024-10-12%2020-48-24.png)
+![Image](https://github.com/atiaisaac/MakerWatch/blob/main/images/image_1.png)
 
 ## About
 An open source smartwatch built by a maker for the maker community packed with interesting features and runs on the zephry RTOS
