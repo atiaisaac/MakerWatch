@@ -25,3 +25,5 @@ Outlined below is a breakdown of the hardware componenets considered for this de
 * __USB-C__ interface for easy flashing of firmware for developers/makers
 
 ## Software
+The MakerWatch uses a usb-c as the main source of flashing new firmware. However, on the board, there are breakout pads that serve as Serial Wire Debug (SWD) interface for doing other cool stuff like ITM when paired with the right hardware programmer. In this version, wires will have to be soldered onto the pads before use.
+
