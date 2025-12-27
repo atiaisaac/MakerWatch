@@ -1,0 +1,3 @@
+[submodule "custom_libs"]
+	path = custom_libs
+	url = git@github.com:atiaisaac/My_Kicad_Library.git
