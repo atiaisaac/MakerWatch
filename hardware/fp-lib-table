@@ -1,5 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "OSW")(type "KiCad")(uri "/home/atia/Documents/watch_project/project libs/Kicad-Libraries/open-Smartwatch.pretty")(options "")(descr ""))
-  (lib (name "gc9a01_fpc")(type "KiCad")(uri "${MY_CUSTOM_LIB}/footprints/gc9a01_fpc.pretty")(options "")(descr ""))
-)
