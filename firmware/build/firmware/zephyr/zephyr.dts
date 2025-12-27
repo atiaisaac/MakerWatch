@@ -23,6 +23,9 @@
 
 	/* node '/aliases' defined in zephyr/dts/common/skeleton.dtsi:13 */
 	aliases {
+		navigation = &button0; /* in ../../Documents/watch_project/firmware/ninab306_nrf52840.overlay:50 */
+		bcklight = &button1;   /* in ../../Documents/watch_project/firmware/ninab306_nrf52840.overlay:51 */
+		clkoe = &button2;      /* in ../../Documents/watch_project/firmware/ninab306_nrf52840.overlay:52 */
 	};
 
 	/* node '/soc' defined in zephyr/dts/arm/armv7-m.dtsi:6 */
@@ -177,6 +180,7 @@
 			pinctrl-names = "default",
 			                "sleep";        /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:69 */
 			clock-frequency = < 0x61a80 >;  /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:70 */
+			zephyr,deferred-init;           /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:130 */
 
 			/* node '/soc/i2c@40003000/rv-8263-c8@68' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:72 */
 			rtcc: rv-8263-c8@68 {
@@ -796,11 +800,6 @@
 		/* node '/pin-controller/spi2_sleep' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:196 */
 		spi2_sleep: spi2_sleep {
 			phandle = < 0x6 >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:169 */
-
-			/* node '/pin-controller/spi2_sleep/group1' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:197 */
-			group1 {
-				psels = < 0x500002c >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:198 */
-			};
 		};
 	};
 
@@ -868,12 +867,12 @@
 			label = "tft_backlight button"; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:26 */
 			gpios = < &gpio0 0xf 0x0 >;     /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:27 */
 		};
-	};
 
-	/* node '/alias' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:31 */
-	alias {
-		nav_button = &button0; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:32 */
-		bcklight = &button1;   /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:33 */
+		/* node '/buttons/button_2' defined in ../../Documents/watch_project/firmware/ninab306_nrf52840.overlay:43 */
+		button2: button_2 {
+			label = "rtcc clkoe button";   /* in ../../Documents/watch_project/firmware/ninab306_nrf52840.overlay:44 */
+			gpios = < &gpio0 0x1f 0x200 >; /* in ../../Documents/watch_project/firmware/ninab306_nrf52840.overlay:45 */
+		};
 	};
 
 	/* node '/mipi_dbi' defined in ../../Documents/watch_project/firmware/ninab306_nrf52840.overlay:21 */

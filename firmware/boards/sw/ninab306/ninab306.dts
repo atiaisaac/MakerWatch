@@ -27,11 +27,6 @@
 			gpios = <&gpio0 15 0>;
 		};
 	};
-
-	alias {
-		nav_button = &button0;
-		bcklight = &button1;
-	};
 };
 
 &flash0 {
@@ -63,6 +58,7 @@
 };
 
 &i2c0 {
+	compatible = "nordic,nrf-twim";
 	status = "okay";
 	pinctrl-0 = <&i2c0_default>;
 	pinctrl-1 = <&i2c0_sleep>;

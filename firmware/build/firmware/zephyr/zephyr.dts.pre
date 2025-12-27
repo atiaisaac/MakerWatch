@@ -979,10 +979,21 @@
             height = <240>;
         };
     };
-};
 
-&i2c0 {
- /delete-property/ zephyr,deferred-init;
+    buttons {
+        button2: button_2 {
+   label = "rtcc clkoe button";
+   gpios = <&gpio0 31 (1 << 9)>;
+  };
+    };
+
+ aliases {
+  navigation = &button0;
+  bcklight = &button1;
+  clkoe = &button2;
+ };
 };
+/delete-node/ &{/pin-controller/spi2_sleep/group1/};
+/delete-node/ &{/alias/};
 # 0 "<command-line>" 2
 # 1 "/home/atia/ncs/v3.2.1/zephyr/misc/empty_file.c"
