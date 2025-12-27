@@ -1,0 +1,10 @@
+identifier: ninab306/nrf52840
+name: custom board
+vendor: sw
+type: mcu
+arch: arm
+ram: 256
+flash: 1024
+toolchain:
+  - zephyr
+supported: []

@@ -1,0 +1,2 @@
+# Load Sysbuild board Kconfig descriptions.
+osource "/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/Kconfig.sysbuild"

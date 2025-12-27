@@ -1,0 +1,32 @@
+# defines board-level default config settings  available to the board at all tiemes.
+
+# ENABLE GPIO
+CONFIG_GPIO=y
+
+# Enable I2C
+CONFIG_I2C=y
+
+# Enable SPI
+CONFIG_SPI=y
+
+# Enable serial
+CONFIG_SERIAL=y
+
+# Enable usb cdc acm
+CONFIG_USB_DEVICE_STACK=y
+CONFIG_USB_DEVICE_DRIVER=y
+CONFIG_USB_NRFX=y
+CONFIG_USB_CDC_ACM=y
+CONFIG_USB_CDC_ACM_RINGBUF_SIZE=1024
+
+# Enable console
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=y
+
+# MEMORY PROTECTION
+CONFIG_ARM_MPU=y
+CONFIG_HW_STACK_PROTECTION=y
+
+# ENABLE SENSORS
+CONFIG_SENSOR=y
+CONFIG_RTC=y

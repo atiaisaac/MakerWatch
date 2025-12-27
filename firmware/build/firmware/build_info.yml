@@ -1,0 +1,60 @@
+cmake:
+  application:
+    configuration-dir: '/home/atia/Documents/watch_project/firmware'
+    source-dir: '/home/atia/Documents/watch_project/firmware'
+  board:
+    name: 'ninab306'
+    path:
+     - '/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306'
+    qualifiers: 'nrf52840'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/atia/ncs/v3.2.1/nrf/dts/bindings'
+     - '/home/atia/ncs/v3.2.1/modules/lib/max32664c/dts/bindings'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/bindings'
+    files:
+     - '/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts'
+     - '/home/atia/Documents/watch_project/firmware/ninab306_nrf52840.overlay'
+    include-dirs:
+     - '/home/atia/ncs/v3.2.1/nrf/include'
+     - '/home/atia/ncs/v3.2.1/nrf/dts/common'
+     - '/home/atia/ncs/v3.2.1/nrf/dts/riscv'
+     - '/home/atia/ncs/v3.2.1/nrf/dts/arm'
+     - '/home/atia/ncs/v3.2.1/nrf/dts'
+     - '/home/atia/ncs/v3.2.1/modules/lib/max32664c/include'
+     - '/home/atia/ncs/v3.2.1/modules/lib/max32664c/include/zephyr'
+     - '/home/atia/ncs/v3.2.1/modules/lib/max32664c/dts'
+     - '/home/atia/ncs/v3.2.1/zephyr/include'
+     - '/home/atia/ncs/v3.2.1/zephyr/include/zephyr'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/common'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/vendor'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/rx'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/x86'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/xtensa'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/sparc'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/riscv'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/posix'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/arm64'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/arm'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts/arc'
+     - '/home/atia/ncs/v3.2.1/zephyr/dts'
+    user-files:
+     - '/home/atia/Documents/watch_project/firmware/ninab306_nrf52840.overlay'
+  kconfig:
+    files:
+     - '/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306_defconfig'
+     - '/home/atia/Documents/watch_project/firmware/prj.conf'
+     - '/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/.config.sysbuild'
+    user-files:
+     - '/home/atia/Documents/watch_project/firmware/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/atia/ncs/toolchains/43683a87ea/opt/zephyr-sdk'
+  vendor-specific:
+    nordic:
+      svdfile: '/home/atia/ncs/v3.2.1/modules/hal/nordic/nrfx/bsp/stable/mdk/nrf52840.svd'
+  zephyr:
+    version: '4.2.99'
+    zephyr-base: '/home/atia/ncs/v3.2.1/zephyr'
+version: '0.1.0'

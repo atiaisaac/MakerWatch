@@ -1,0 +1,2 @@
+"nrf":"/home/atia/ncs/v3.2.1/nrf":"/home/atia/ncs/v3.2.1/nrf/sysbuild"
+"mcuboot":"/home/atia/ncs/v3.2.1/bootloader/mcuboot":"/home/atia/ncs/v3.2.1/bootloader/mcuboot/boot/zephyr/sysbuild"

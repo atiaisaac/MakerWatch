@@ -1,0 +1,2 @@
+osource "/home/atia/Documents/watch_project/nrf_firmware/boards/shields/*/Kconfig.defconfig"
+osource "/home/atia/ncs/v3.2.1/nrf/boards/shields/*/Kconfig.defconfig"

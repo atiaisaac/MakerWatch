@@ -1,0 +1,7 @@
+default: firmware
+build_dir: /home/atia/Documents/watch_project/firmware/build
+domains:
+  - name: firmware
+    build_dir: /home/atia/Documents/watch_project/firmware/build/firmware
+flash_order:
+  - firmware

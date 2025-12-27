@@ -1,0 +1,201 @@
+/dts-v1/;
+#include <nordic/nrf52840_qiaa.dtsi>
+#include "ninab306-pinctrl.dtsi"
+
+/ {
+	model = "custom board";
+	compatible = "sw,ninab306";
+
+	chosen {
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,code-partition = &slot0_partition;
+		zephyr,console = &cdc_acm_uart0;
+        zephyr,shell-uart = &cdc_acm_uart0;
+        zephyr,bt-uart = &cdc_acm_uart0;
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+		button0: button_0 {
+			label = "navigation button";
+			gpios = <&gpio0 16 0>;
+		};
+
+		button1: button_1 {
+			label = "tft_backlight button";
+			gpios = <&gpio0 15 0>;
+		};
+	};
+
+	alias {
+		nav_button = &button0;
+		bcklight = &button1;
+	};
+};
+
+&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x00000000 DT_SIZE_K(48)>;
+		};
+
+		slot0_partition: partition@c000 {
+			label = "image-0";
+			reg = <0x0000c000 DT_SIZE_K(472)>;
+		};
+
+		slot1_partition: partition@82000 {
+			label = "image-1";
+			reg = <0x00082000 DT_SIZE_K(472)>;
+		};
+
+		storage_partition: partition@f8000 {
+			label = "storage";
+			reg = <0x000f8000 DT_SIZE_K(32)>;
+		};
+	};
+};
+
+&i2c0 {
+	status = "okay";
+	pinctrl-0 = <&i2c0_default>;
+	pinctrl-1 = <&i2c0_sleep>;
+	pinctrl-names = "default", "sleep";
+	clock-frequency = <I2C_BITRATE_FAST>;
+
+	rtcc: rv-8263-c8@68 {
+		compatible = "microcrystal,rv-8263-c8";
+		reg = <0x68>;
+		clkout = <32768>;
+		status = "okay";
+	};
+
+	battery_charger: npm1300@6b {
+		compatible = "nordic,npm1300";
+		reg = <0x6b>;
+
+		npm_charger {
+            compatible = "nordic,npm1300-charger";
+            status = "okay";
+            term-microvolt = <4200000>;
+            current-microamp = <500000>;
+            dischg-limit-microamp = <1000000>;
+            term-current-percent = <20>;
+            vbus-limit-microamp = <1500000>;
+            thermistor-ohms = <0>;
+            thermistor-beta = <0>;
+            charging-enable;
+
+        };
+
+        npm_regulators {
+            compatible = "nordic,npm1300-regulator";
+
+            BUCK1 {
+                regulator-boot-on;
+                // regulator-initial-mode = <NPM13XX_BUCK_MODE_AUTO>;
+            };
+            BUCK2 {
+                regulator-boot-off;
+            };
+            LDO1 {
+                regulator-boot-off;
+            };
+            LDO2 {
+                regulator-boot-off;
+            };
+        };
+	};
+
+	biometric_hub: max32664c@55 {
+		compatible = "maxim,max32664c";
+		reg = <0x55>;
+		status = "okay";
+		reset-gpios = <&gpio0 25 GPIO_ACTIVE_HIGH>;
+		mfio-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>;
+		hr-config = [00 01];
+		spo2-config = [11 21];
+		led-current = [3F 3F 3F];
+		min-sampling-rate = <400>;
+		max-sampling-rate = <400>;
+		use-max86141;
+	};
+
+	zephyr,deferred-init;
+	imu: lsm6dso@6a {
+		compatible = "st,lsm6dso";
+		reg = <0x6a>;
+		drdy-pulsed;
+		accel-odr = <1>;
+		accel-pm = <2>;
+		accel-range = <3>;
+		gyro-odr = <1>;
+		gyro-pm = <1>;
+		gyro-range = <6>;
+		int-pin = <2>;
+		status = "okay";
+	};
+};
+
+&gpio0 {
+	status = "okay";
+};
+
+&gpiote {
+	status = "okay";
+};
+
+&gpio1 {
+	status = "okay";
+};
+
+
+&usbd {
+	status = "okay";
+	 cdc_acm_uart0: cdc_acm_uart0 {
+        compatible = "zephyr,cdc-acm-uart";
+	 };
+};
+
+&spi2 {
+	status = "okay";
+	pinctrl-0 = <&spi2_default>;
+	pinctrl-1 = <&spi2_sleep>;
+	pinctrl-names = "default", "sleep";
+	cs-gpios = <&gpio0 29 0>;
+	compatible = "nordic,nrf-spi";
+};
+
+&pinctrl {
+	i2c0_default: i2c0_default {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SCL, 0, 21)>, <NRF_PSEL(TWIM_SDA, 0, 22)>;
+		};
+	};
+
+	i2c0_sleep: i2c0_sleep {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SCL, 0, 21)>;
+		};
+	};
+
+	spi2_default: spi2_default {
+		group1 {
+			psels = <NRF_PSEL(SPIM_MOSI, 1, 12)>,
+					<NRF_PSEL(SPIM_SCK, 1, 13)>,
+					<NRF_PSEL(SPIM_MISO, 0, 14)>;
+		};
+	};
+
+	spi2_sleep: spi2_sleep {
+		group1 {
+			psels = <NRF_PSEL(SPIM_MOSI, 1, 12)>;
+		};
+	};
+};

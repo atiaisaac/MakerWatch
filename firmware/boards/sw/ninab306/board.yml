@@ -1,0 +1,5 @@
+board:
+  name: ninab306
+  vendor: sw
+  socs:
+    - name: nrf52840

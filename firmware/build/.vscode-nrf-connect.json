@@ -1,0 +1,18 @@
+{
+  "toolchainPath": "/home/atia/ncs/toolchains/43683a87ea",
+  "sdkPath": "/home/atia/ncs/v3.2.1",
+  "board": "ninab306/nrf52840",
+  "boardDir": "/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306",
+  "boardDirs": [
+    "/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306"
+  ],
+  "optimizations": "none",
+  "cmakeArgs": [],
+  "confFiles": [],
+  "buildDirectory": "build",
+  "kconfigFragments": [],
+  "snippets": [],
+  "dtcOverlays": [],
+  "extraDtcOverlays": [],
+  "boardRoot": "/home/atia/Documents/watch_project/nrf_firmware"
+}
