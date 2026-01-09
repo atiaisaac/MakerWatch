@@ -947,12 +947,12 @@
  };
 };
 # 0 "<command-line>" 2
-# 1 "/home/atia/Documents/watch_project/firmware/ninab306_nrf52840.overlay" 1
-# 13 "/home/atia/Documents/watch_project/firmware/ninab306_nrf52840.overlay"
+# 1 "./boards/sw/ninab306/ninab306_nrf52840.overlay" 1
+# 13 "./boards/sw/ninab306/ninab306_nrf52840.overlay"
 # 1 "/home/atia/ncs/v3.2.1/zephyr/include/zephyr/dt-bindings/display/panel.h" 1 3 4
-# 14 "/home/atia/Documents/watch_project/firmware/ninab306_nrf52840.overlay" 2
+# 14 "./boards/sw/ninab306/ninab306_nrf52840.overlay" 2
 # 1 "/home/atia/ncs/v3.2.1/zephyr/include/zephyr/dt-bindings/mipi_dbi/mipi_dbi.h" 1 3 4
-# 15 "/home/atia/Documents/watch_project/firmware/ninab306_nrf52840.overlay" 2
+# 15 "./boards/sw/ninab306/ninab306_nrf52840.overlay" 2
 
 / {
  chosen {
@@ -981,6 +981,16 @@
     };
 
     buttons {
+        compatible = "gpio-keys";
+  button0: button_0 {
+   label = "navigation button";
+   gpios = <&gpio0 16 0>;
+  };
+
+  button1: button_1 {
+   label = "tft_backlight button";
+   gpios = <&gpio0 15 0>;
+  };
         button2: button_2 {
    label = "rtcc clkoe button";
    gpios = <&gpio0 31 (1 << 9)>;
@@ -992,6 +1002,97 @@
   bcklight = &button1;
   clkoe = &button2;
  };
+};
+
+&i2c0 {
+ compatible = "nordic,nrf-twim";
+ status = "okay";
+ pinctrl-0 = <&i2c0_default>;
+ pinctrl-1 = <&i2c0_sleep>;
+ pinctrl-names = "default", "sleep";
+ clock-frequency = <400000>;
+
+ rtcc: rv-8263-c8@68 {
+  compatible = "microcrystal,rv-8263-c8";
+  reg = <0x68>;
+  clkout = <32768>;
+  status = "okay";
+ };
+
+ battery_charger: npm1300@6b {
+  compatible = "nordic,npm1300";
+  reg = <0x6b>;
+
+  npm_charger {
+            compatible = "nordic,npm1300-charger";
+            status = "okay";
+            term-microvolt = <4200000>;
+            current-microamp = <500000>;
+            dischg-limit-microamp = <1000000>;
+            term-current-percent = <20>;
+            vbus-limit-microamp = <1500000>;
+            thermistor-ohms = <0>;
+            thermistor-beta = <0>;
+            charging-enable;
+
+        };
+
+        npm_regulators {
+            compatible = "nordic,npm1300-regulator";
+
+            BUCK1 {
+                regulator-boot-on;
+
+            };
+            BUCK2 {
+                regulator-boot-off;
+            };
+            LDO1 {
+                regulator-boot-off;
+            };
+            LDO2 {
+                regulator-boot-off;
+            };
+        };
+ };
+
+ biometric_hub: max32664c@55 {
+  compatible = "maxim,max32664c";
+  reg = <0x55>;
+  status = "okay";
+  reset-gpios = <&gpio0 25 (0 << 0)>;
+  mfio-gpios = <&gpio0 24 (0 << 0)>;
+  hr-config = [00 01];
+  spo2-config = [11 21];
+  led-current = [3F 3F 3F];
+  min-sampling-rate = <400>;
+  max-sampling-rate = <400>;
+  use-max86141;
+ };
+
+ zephyr,deferred-init;
+ imu: lsm6dso@6a {
+  compatible = "st,lsm6dso";
+  reg = <0x6a>;
+  drdy-pulsed;
+  accel-odr = <1>;
+  accel-pm = <2>;
+  accel-range = <3>;
+  gyro-odr = <1>;
+  gyro-pm = <1>;
+  gyro-range = <6>;
+  int-pin = <2>;
+  status = "okay";
+ };
+};
+
+&spi2 {
+ status = "okay";
+ pinctrl-0 = <&spi2_default>;
+ pinctrl-1 = <&spi2_sleep>;
+ pinctrl-names = "default", "sleep";
+ cs-gpios = <&gpio0 29 0>;
+ compatible = "nordic,nrf-spi";
 };
 /delete-node/ &{/pin-controller/spi2_sleep/group1/};
 /delete-node/ &{/alias/};

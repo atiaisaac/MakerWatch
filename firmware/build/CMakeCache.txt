@@ -76,6 +76,12 @@ CMAKE_SKIP_RPATH:BOOL=NO
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
+CONF_FILE:UNINITIALIZED=prj.conf
+
+//No help, variable specified on the command line.
+DTC_OVERLAY_FILE:UNINITIALIZED=boards/sw/ninab306/ninab306_nrf52840.overlay
+
+//No help, variable specified on the command line.
 WEST_PYTHON:UNINITIALIZED=/home/atia/ncs/toolchains/43683a87ea/usr/local/bin/python3.12
 
 //Zephyr base

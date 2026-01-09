@@ -13,19 +13,7 @@
 		zephyr,console = &cdc_acm_uart0;
         zephyr,shell-uart = &cdc_acm_uart0;
         zephyr,bt-uart = &cdc_acm_uart0;
-	};
-
-	buttons {
-		compatible = "gpio-keys";
-		button0: button_0 {
-			label = "navigation button";
-			gpios = <&gpio0 16 0>;
-		};
-
-		button1: button_1 {
-			label = "tft_backlight button";
-			gpios = <&gpio0 15 0>;
-		};
+		
 	};
 };
 
@@ -57,88 +45,6 @@
 	};
 };
 
-&i2c0 {
-	compatible = "nordic,nrf-twim";
-	status = "okay";
-	pinctrl-0 = <&i2c0_default>;
-	pinctrl-1 = <&i2c0_sleep>;
-	pinctrl-names = "default", "sleep";
-	clock-frequency = <I2C_BITRATE_FAST>;
-
-	rtcc: rv-8263-c8@68 {
-		compatible = "microcrystal,rv-8263-c8";
-		reg = <0x68>;
-		clkout = <32768>;
-		status = "okay";
-	};
-
-	battery_charger: npm1300@6b {
-		compatible = "nordic,npm1300";
-		reg = <0x6b>;
-
-		npm_charger {
-            compatible = "nordic,npm1300-charger";
-            status = "okay";
-            term-microvolt = <4200000>;
-            current-microamp = <500000>;
-            dischg-limit-microamp = <1000000>;
-            term-current-percent = <20>;
-            vbus-limit-microamp = <1500000>;
-            thermistor-ohms = <0>;
-            thermistor-beta = <0>;
-            charging-enable;
-
-        };
-
-        npm_regulators {
-            compatible = "nordic,npm1300-regulator";
-
-            BUCK1 {
-                regulator-boot-on;
-                // regulator-initial-mode = <NPM13XX_BUCK_MODE_AUTO>;
-            };
-            BUCK2 {
-                regulator-boot-off;
-            };
-            LDO1 {
-                regulator-boot-off;
-            };
-            LDO2 {
-                regulator-boot-off;
-            };
-        };
-	};
-
-	biometric_hub: max32664c@55 {
-		compatible = "maxim,max32664c";
-		reg = <0x55>;
-		status = "okay";
-		reset-gpios = <&gpio0 25 GPIO_ACTIVE_HIGH>;
-		mfio-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>;
-		hr-config = [00 01];
-		spo2-config = [11 21];
-		led-current = [3F 3F 3F];
-		min-sampling-rate = <400>;
-		max-sampling-rate = <400>;
-		use-max86141;
-	};
-
-	zephyr,deferred-init;
-	imu: lsm6dso@6a {
-		compatible = "st,lsm6dso";
-		reg = <0x6a>;
-		drdy-pulsed;
-		accel-odr = <1>;
-		accel-pm = <2>;
-		accel-range = <3>;
-		gyro-odr = <1>;
-		gyro-pm = <1>;
-		gyro-range = <6>;
-		int-pin = <2>;
-		status = "okay";
-	};
-};
-
 &gpio0 {
 	status = "okay";
 };
@@ -151,21 +57,11 @@
 	status = "okay";
 };
 
-
 &usbd {
 	status = "okay";
 	 cdc_acm_uart0: cdc_acm_uart0 {
         compatible = "zephyr,cdc-acm-uart";
 	 };
-};
-
-&spi2 {
-	status = "okay";
-	pinctrl-0 = <&spi2_default>;
-	pinctrl-1 = <&spi2_sleep>;
-	pinctrl-names = "default", "sleep";
-	cs-gpios = <&gpio0 29 0>;
-	compatible = "nordic,nrf-spi";
 };
 
 &pinctrl {

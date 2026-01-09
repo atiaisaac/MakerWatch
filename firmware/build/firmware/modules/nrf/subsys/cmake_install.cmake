@@ -44,6 +44,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/app_event_manager/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/app_event_manager_profiler_tracer/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/dfu/cmake_install.cmake")
 endif()
 

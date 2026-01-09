@@ -340,6 +340,10 @@
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/net/CMakeFiles/edit_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/net/lib/CMakeFiles/rebuild_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/net/lib/CMakeFiles/edit_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/app_event_manager/CMakeFiles/rebuild_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/app_event_manager/CMakeFiles/edit_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/app_event_manager_profiler_tracer/CMakeFiles/rebuild_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/app_event_manager_profiler_tracer/CMakeFiles/edit_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/dfu/CMakeFiles/rebuild_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/dfu/CMakeFiles/edit_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/nrf/subsys/mpsl/CMakeFiles/rebuild_cache.dir

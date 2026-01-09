@@ -12,6 +12,7 @@
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/drivers/i2c.h>
 #include <zephyr/drivers/spi.h>
+#include <app_event_manager.h>
 
 int main(void)
 {

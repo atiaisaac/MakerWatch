@@ -20,6 +20,6 @@ cmake:
   sysbuild: 'true'
 version: '0.1.0'
 west:
-  command: '/home/atia/ncs/toolchains/43683a87ea/usr/local/bin/west build --build-dir /home/atia/Documents/watch_project/firmware/build /home/atia/Documents/watch_project/firmware --pristine --board ninab306/nrf52840 -- -DBOARD_ROOT=/home/atia/Documents/watch_project/nrf_firmware'
+  command: '/home/atia/ncs/toolchains/43683a87ea/usr/local/bin/west build --build-dir /home/atia/Documents/watch_project/firmware/build /home/atia/Documents/watch_project/firmware --pristine --board ninab306/nrf52840 -- -DCONF_FILE=prj.conf -DDTC_OVERLAY_FILE=boards/sw/ninab306/ninab306_nrf52840.overlay -DBOARD_ROOT=/home/atia/Documents/watch_project/nrf_firmware'
   topdir: '/home/atia/ncs/v3.2.1'
   version: '1.4.0'

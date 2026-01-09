@@ -344,6 +344,19 @@ __ramfunc_load_start = LOADADDR(.ramfunc);
  } > RAM AT > FLASH
  usb_cfg_data_area : ALIGN_WITH_INPUT { _usb_cfg_data_list_start = .; KEEP(*(SORT_BY_NAME(._usb_cfg_data.static.*))); _usb_cfg_data_list_end = .;; } > RAM AT > FLASH
     __data_region_end = .;
+event_type_area : { _event_type_list_start = .; KEEP(*(SORT_BY_NAME(._event_type.static.*))); _event_type_list_end = .;; } > FLASH
+event_listener_area : { _event_listener_list_start = .; KEEP(*(SORT_BY_NAME(._event_listener.static.*))); _event_listener_list_end = .;; } > FLASH
+app_event_manager_postinit_hook_area : { _app_event_manager_postinit_hook_list_start = .; KEEP(*(SORT_BY_NAME(._app_event_manager_postinit_hook.static.*))); _app_event_manager_postinit_hook_list_end = .;; } > FLASH
+event_submit_hook_area : { _event_submit_hook_list_start = .; KEEP(*(SORT_BY_NAME(._event_submit_hook.static.*))); _event_submit_hook_list_end = .;; } > FLASH
+event_preprocess_hook_area : { _event_preprocess_hook_list_start = .; KEEP(*(SORT_BY_NAME(._event_preprocess_hook.static.*))); _event_preprocess_hook_list_end = .;; } > FLASH
+event_postprocess_hook_area : { _event_postprocess_hook_list_start = .; KEEP(*(SORT_BY_NAME(._event_postprocess_hook.static.*))); _event_postprocess_hook_list_end = .;; } > FLASH
+event_subscribers_all : ALIGN_WITH_INPUT
+{
+ __start_event_subscribers_all = .;
+ KEEP(*(SORT(event_subscribers_*)));
+ __stop_event_subscribers_all = .;
+} > FLASH
+nrf_profiler_info_area : { _nrf_profiler_info_list_start = .; KEEP(*(SORT_BY_NAME(._nrf_profiler_info.static.*))); _nrf_profiler_info_list_end = .;; } > FLASH
 PROVIDE(soc_reset_hook = SystemInit);
 /DISCARD/ :
 {

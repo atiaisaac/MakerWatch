@@ -79,6 +79,8 @@ zephyr/linker_zephyr_pre0.cmd: \
   /home/atia/ncs/v3.2.1/zephyr/include/zephyr/linker/cplusplus-ram.ld \
   zephyr/include/generated/snippets-data-sections.ld \
   zephyr/include/generated/snippets-sections.ld \
+  /home/atia/ncs/v3.2.1/nrf/subsys/app_event_manager/aem.ld \
+  /home/atia/ncs/v3.2.1/nrf/subsys/app_event_manager_profiler_tracer/em_pt.ld \
   /home/atia/ncs/v3.2.1/zephyr/soc/nordic/common/platform_init.ld \
   /home/atia/ncs/v3.2.1/zephyr/include/zephyr/linker/intlist.ld \
   /home/atia/ncs/v3.2.1/zephyr/include/zephyr/linker/debug-sections.ld \
