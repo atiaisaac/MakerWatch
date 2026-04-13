@@ -27,7 +27,7 @@ APPLICATION_SOURCE_DIR:PATH=/home/atia/Documents/watch_project/firmware
 BOARD:STRING=ninab306/nrf52840
 
 //Main board directory for board (ninab306)
-BOARD_DIR:PATH=/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306
+BOARD_DIR:PATH=/home/atia/Documents/watch_project/firmware/boards/sw/ninab306
 
 //Support board extensions
 BOARD_EXTENSIONS:BOOL=ON
@@ -316,7 +316,7 @@ DTC:FILEPATH=/home/atia/ncs/toolchains/43683a87ea/usr/bin/dtc
 // parameter. These settings will override the settings in the
 // board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
 // dts2.overlay"
-DTC_OVERLAY_FILE:STRING=boards/sw/ninab306/ninab306_nrf52840.overlay
+DTC_OVERLAY_FILE:STRING=boards/sw/ninab306/ninab306.overlay
 
 //No help, variable specified on the command line.
 EXTRA_KCONFIG_TARGETS:UNINITIALIZED=
@@ -438,7 +438,7 @@ my_app_SOURCE_DIR:STATIC=/home/atia/Documents/watch_project/firmware
 ########################
 
 //List of board directories for board (ninab306)
-BOARD_DIRECTORIES:INTERNAL=/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306
+BOARD_DIRECTORIES:INTERNAL=/home/atia/Documents/watch_project/firmware/boards/sw/ninab306
 //DT bindings root directories
 CACHED_DTS_ROOT_BINDINGS:INTERNAL=/home/atia/ncs/v3.2.1/nrf/dts/bindings;/home/atia/ncs/v3.2.1/modules/lib/max32664c/dts/bindings;/home/atia/ncs/v3.2.1/zephyr/dts/bindings
 //ADVANCED property for variable: CMAKE_ADDR2LINE
@@ -548,7 +548,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=221
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=226
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

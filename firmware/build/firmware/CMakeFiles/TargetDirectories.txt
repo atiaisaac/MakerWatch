@@ -153,6 +153,16 @@
 /home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/usb/device/CMakeFiles/edit_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/usb/device/class/CMakeFiles/rebuild_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/usb/device/class/CMakeFiles/edit_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/CMakeFiles/rebuild_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/CMakeFiles/edit_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/modules/CMakeFiles/rebuild_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/modules/CMakeFiles/edit_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/modules/kernel_service/CMakeFiles/rebuild_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/modules/kernel_service/CMakeFiles/edit_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/modules/kernel_service/thread/CMakeFiles/rebuild_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/modules/kernel_service/thread/CMakeFiles/edit_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/backends/CMakeFiles/rebuild_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/backends/CMakeFiles/edit_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/zephyr/drivers/CMakeFiles/rebuild_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/zephyr/drivers/CMakeFiles/edit_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/zephyr/drivers/disk/CMakeFiles/rebuild_cache.dir
@@ -472,6 +482,7 @@
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/loramac-node/CMakeFiles/edit_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/lvgl/CMakeFiles/rebuild_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/lvgl/CMakeFiles/edit_cache.dir
+/home/atia/Documents/watch_project/firmware/build/firmware/modules/lvgl/CMakeFiles/modules__lvgl.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/mipi-sys-t/CMakeFiles/rebuild_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/mipi-sys-t/CMakeFiles/edit_cache.dir
 /home/atia/Documents/watch_project/firmware/build/firmware/modules/nanopb/CMakeFiles/rebuild_cache.dir

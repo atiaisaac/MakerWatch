@@ -4,7 +4,7 @@ cmake:
   board:
     name: 'ninab306'
     path:
-     - '/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306'
+     - '/home/atia/Documents/watch_project/firmware/boards/sw/ninab306'
     qualifiers: 'nrf52840'
     revision: ''
   images:
@@ -20,6 +20,6 @@ cmake:
   sysbuild: 'true'
 version: '0.1.0'
 west:
-  command: '/home/atia/ncs/toolchains/43683a87ea/usr/local/bin/west build --build-dir /home/atia/Documents/watch_project/firmware/build /home/atia/Documents/watch_project/firmware --pristine --board ninab306/nrf52840 -- -DCONF_FILE=prj.conf -DDTC_OVERLAY_FILE=boards/sw/ninab306/ninab306_nrf52840.overlay -DBOARD_ROOT=/home/atia/Documents/watch_project/nrf_firmware'
+  command: '/home/atia/ncs/toolchains/43683a87ea/usr/local/bin/west build --build-dir /home/atia/Documents/watch_project/firmware/build /home/atia/Documents/watch_project/firmware --pristine --board ninab306/nrf52840 -- -DCONF_FILE=prj.conf -DDTC_OVERLAY_FILE=boards/sw/ninab306/ninab306.overlay -DBOARD_ROOT=/home/atia/Documents/watch_project/firmware'
   topdir: '/home/atia/ncs/v3.2.1'
   version: '1.4.0'

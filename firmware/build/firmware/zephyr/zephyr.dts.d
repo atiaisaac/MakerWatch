@@ -1,5 +1,5 @@
 empty_file.o: /home/atia/ncs/v3.2.1/zephyr/misc/empty_file.c \
- /home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts \
+ /home/atia/Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts \
  /home/atia/ncs/v3.2.1/zephyr/dts/arm/nordic/nrf52840_qiaa.dtsi \
  /home/atia/ncs/v3.2.1/zephyr/dts/common/mem.h \
  /home/atia/ncs/v3.2.1/zephyr/dts/arm/nordic/nrf52840.dtsi \
@@ -26,7 +26,7 @@ empty_file.o: /home/atia/ncs/v3.2.1/zephyr/misc/empty_file.c \
  /home/atia/ncs/v3.2.1/zephyr/dts/arm/nordic/override.dtsi \
  /home/atia/ncs/v3.2.1/zephyr/include/zephyr/dt-bindings/adc/nrf-saadc.h \
  /home/atia/ncs/v3.2.1/zephyr/include/zephyr/dt-bindings/regulator/nrf5x.h \
- /home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306-pinctrl.dtsi \
- boards/sw/ninab306/ninab306_nrf52840.overlay \
+ /home/atia/Documents/watch_project/firmware/boards/sw/ninab306/ninab306-pinctrl.dtsi \
+ boards/sw/ninab306/ninab306.overlay \
  /home/atia/ncs/v3.2.1/zephyr/include/zephyr/dt-bindings/display/panel.h \
  /home/atia/ncs/v3.2.1/zephyr/include/zephyr/dt-bindings/mipi_dbi/mipi_dbi.h

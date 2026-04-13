@@ -4,28 +4,28 @@
 / {
 	#address-cells = < 0x1 >;   /* in zephyr/dts/common/skeleton.dtsi:10 */
 	#size-cells = < 0x1 >;      /* in zephyr/dts/common/skeleton.dtsi:11 */
-	model = "custom board";     /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:6 */
-	compatible = "sw,ninab306"; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:7 */
+	model = "custom board";     /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:6 */
+	compatible = "sw,ninab306"; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:7 */
 
 	/* node '/chosen' defined in zephyr/dts/common/skeleton.dtsi:12 */
 	chosen {
 		zephyr,bt-hci = &bt_hci_sdc;                 /* in zephyr/dts/arm/nordic/nrf52840.dtsi:14 */
 		zephyr,entropy = &cryptocell;                /* in zephyr/dts/arm/nordic/nrf52840.dtsi:15 */
 		zephyr,flash-controller = &flash_controller; /* in zephyr/dts/arm/nordic/nrf52840.dtsi:16 */
-		zephyr,sram = &sram0;                        /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:10 */
-		zephyr,flash = &flash0;                      /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:11 */
-		zephyr,code-partition = &slot0_partition;    /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:12 */
-		zephyr,console = &cdc_acm_uart0;             /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:13 */
-		zephyr,shell-uart = &cdc_acm_uart0;          /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:14 */
-		zephyr,bt-uart = &cdc_acm_uart0;             /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:15 */
-		zephyr,display = &gc9a01;                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:18 */
+		zephyr,sram = &sram0;                        /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:10 */
+		zephyr,flash = &flash0;                      /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:11 */
+		zephyr,code-partition = &slot0_partition;    /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:12 */
+		zephyr,console = &cdc_acm_uart0;             /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:13 */
+		zephyr,shell-uart = &cdc_acm_uart0;          /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:14 */
+		zephyr,bt-uart = &cdc_acm_uart0;             /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:15 */
+		zephyr,display = &gc9a01;                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:18 */
 	};
 
 	/* node '/aliases' defined in zephyr/dts/common/skeleton.dtsi:13 */
 	aliases {
-		navigation = &button0; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:60 */
-		bcklight = &button1;   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:61 */
-		clkoe = &button2;      /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:62 */
+		navigation = &button0; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:60 */
+		bcklight = &button1;   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:61 */
+		clkoe = &button2;      /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:62 */
 	};
 
 	/* node '/soc' defined in zephyr/dts/arm/armv7-m.dtsi:6 */
@@ -173,96 +173,96 @@
 			interrupts = < 0x3 0x1 >;       /* in zephyr/dts/arm/nordic/nrf52840.dtsi:150 */
 			easydma-maxcnt-bits = < 0x10 >; /* in zephyr/dts/arm/nordic/nrf52840.dtsi:151 */
 			zephyr,pm-device-runtime-auto;  /* in zephyr/dts/arm/nordic/nrf52840.dtsi:153 */
-			compatible = "nordic,nrf-twim"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:67 */
-			status = "okay";                /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:68 */
-			pinctrl-0 = < &i2c0_default >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:69 */
-			pinctrl-1 = < &i2c0_sleep >;    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:70 */
+			compatible = "nordic,nrf-twim"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:67 */
+			status = "okay";                /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:68 */
+			pinctrl-0 = < &i2c0_default >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:69 */
+			pinctrl-1 = < &i2c0_sleep >;    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:70 */
 			pinctrl-names = "default",
-			                "sleep";        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:71 */
-			clock-frequency = < 0x61a80 >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:72 */
-			zephyr,deferred-init;           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:132 */
+			                "sleep";        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:71 */
+			clock-frequency = < 0x61a80 >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:72 */
+			zephyr,deferred-init;           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:132 */
 
-			/* node '/soc/i2c@40003000/rv-8263-c8@68' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:72 */
+			/* node '/soc/i2c@40003000/rv-8263-c8@68' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:74 */
 			rtcc: rv-8263-c8@68 {
-				compatible = "microcrystal,rv-8263-c8"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:75 */
-				reg = < 0x68 >;                         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:76 */
-				clkout = < 0x8000 >;                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:77 */
-				status = "okay";                        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:78 */
+				compatible = "microcrystal,rv-8263-c8"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:75 */
+				reg = < 0x68 >;                         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:76 */
+				clkout = < 0x8000 >;                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:77 */
+				status = "okay";                        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:78 */
 			};
 
-			/* node '/soc/i2c@40003000/npm1300@6b' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:79 */
+			/* node '/soc/i2c@40003000/npm1300@6b' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:81 */
 			battery_charger: npm1300@6b {
-				compatible = "nordic,npm1300"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:82 */
-				reg = < 0x6b >;                /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:83 */
+				compatible = "nordic,npm1300"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:82 */
+				reg = < 0x6b >;                /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:83 */
 
-				/* node '/soc/i2c@40003000/npm1300@6b/npm_charger' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:83 */
+				/* node '/soc/i2c@40003000/npm1300@6b/npm_charger' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:85 */
 				npm_charger {
-					compatible = "nordic,npm1300-charger"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:86 */
-					status = "okay";                       /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:87 */
-					term-microvolt = < 0x401640 >;         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:88 */
-					current-microamp = < 0x7a120 >;        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:89 */
-					dischg-limit-microamp = < 0xf4240 >;   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:90 */
-					term-current-percent = < 0x14 >;       /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:91 */
-					vbus-limit-microamp = < 0x16e360 >;    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:92 */
-					thermistor-ohms = < 0x0 >;             /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:93 */
-					thermistor-beta = < 0x0 >;             /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:94 */
-					charging-enable;                       /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:95 */
+					compatible = "nordic,npm1300-charger"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:86 */
+					status = "okay";                       /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:87 */
+					term-microvolt = < 0x401640 >;         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:88 */
+					current-microamp = < 0x7d00 >;         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:89 */
+					dischg-limit-microamp = < 0xf4240 >;   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:90 */
+					term-current-percent = < 0x14 >;       /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:91 */
+					vbus-limit-microamp = < 0x16e360 >;    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:92 */
+					thermistor-ohms = < 0x0 >;             /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:93 */
+					thermistor-beta = < 0x0 >;             /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:94 */
+					charging-enable;                       /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:95 */
 				};
 
-				/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:97 */
+				/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:99 */
 				npm_regulators {
-					compatible = "nordic,npm1300-regulator"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:100 */
+					compatible = "nordic,npm1300-regulator"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:100 */
 
-					/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators/BUCK1' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:100 */
+					/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators/BUCK1' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:102 */
 					BUCK1 {
-						regulator-boot-on; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:103 */
+						regulator-boot-on; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:103 */
 					};
 
-					/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators/BUCK2' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:104 */
+					/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators/BUCK2' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:106 */
 					BUCK2 {
-						regulator-boot-off; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:107 */
+						regulator-boot-off; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:107 */
 					};
 
-					/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators/LDO1' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:107 */
+					/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators/LDO1' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:109 */
 					LDO1 {
-						regulator-boot-off; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:110 */
+						regulator-boot-off; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:110 */
 					};
 
-					/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators/LDO2' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:110 */
+					/* node '/soc/i2c@40003000/npm1300@6b/npm_regulators/LDO2' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:112 */
 					LDO2 {
-						regulator-boot-off; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:113 */
+						regulator-boot-off; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:113 */
 					};
 				};
 			};
 
-			/* node '/soc/i2c@40003000/max32664c@55' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:116 */
+			/* node '/soc/i2c@40003000/max32664c@55' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:118 */
 			biometric_hub: max32664c@55 {
-				compatible = "maxim,max32664c";    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:119 */
-				reg = < 0x55 >;                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:120 */
-				status = "okay";                   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:121 */
-				reset-gpios = < &gpio0 0x19 0x0 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:122 */
-				mfio-gpios = < &gpio0 0x18 0x0 >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:123 */
-				hr-config = [ 00 01 ];             /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:124 */
-				spo2-config = [ 11 21 ];           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:125 */
-				led-current = [ 3F 3F 3F ];        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:126 */
-				min-sampling-rate = < 0x190 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:127 */
-				max-sampling-rate = < 0x190 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:128 */
-				use-max86141;                      /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:129 */
+				compatible = "maxim,max32664c";    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:119 */
+				reg = < 0x55 >;                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:120 */
+				status = "okay";                   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:121 */
+				reset-gpios = < &gpio0 0x19 0x0 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:122 */
+				mfio-gpios = < &gpio0 0x18 0x0 >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:123 */
+				hr-config = [ 00 01 ];             /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:124 */
+				spo2-config = [ 11 21 ];           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:125 */
+				led-current = [ 3F 3F 3F ];        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:126 */
+				min-sampling-rate = < 0x190 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:127 */
+				max-sampling-rate = < 0x190 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:128 */
+				use-max86141;                      /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:129 */
 			};
 
-			/* node '/soc/i2c@40003000/lsm6dso@6a' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:131 */
+			/* node '/soc/i2c@40003000/lsm6dso@6a' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:133 */
 			imu: lsm6dso@6a {
-				compatible = "st,lsm6dso"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:134 */
-				reg = < 0x6a >;            /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:135 */
-				drdy-pulsed;               /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:136 */
-				accel-odr = < 0x1 >;       /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:137 */
-				accel-pm = < 0x2 >;        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:138 */
-				accel-range = < 0x3 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:139 */
-				gyro-odr = < 0x1 >;        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:140 */
-				gyro-pm = < 0x1 >;         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:141 */
-				gyro-range = < 0x6 >;      /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:142 */
-				int-pin = < 0x2 >;         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:143 */
-				status = "okay";           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:144 */
+				compatible = "st,lsm6dso"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:134 */
+				reg = < 0x6a >;            /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:135 */
+				drdy-pulsed;               /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:136 */
+				accel-odr = < 0x1 >;       /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:137 */
+				accel-pm = < 0x2 >;        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:138 */
+				accel-range = < 0x3 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:139 */
+				gyro-odr = < 0x1 >;        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:140 */
+				gyro-pm = < 0x1 >;         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:141 */
+				gyro-range = < 0x6 >;      /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:142 */
+				int-pin = < 0x2 >;         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:143 */
+				status = "okay";           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:144 */
 			};
 		};
 
@@ -316,7 +316,7 @@
 			reg = < 0x40006000 0x1000 >;      /* in zephyr/dts/arm/nordic/nrf52840.dtsi:219 */
 			interrupts = < 0x6 0x5 >;         /* in zephyr/dts/arm/nordic/nrf52840.dtsi:220 */
 			instance = < 0x0 >;               /* in zephyr/dts/arm/nordic/nrf52840.dtsi:222 */
-			status = "okay";                  /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:151 */
+			status = "okay";                  /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:53 */
 			phandle = < 0x7 >;                /* in zephyr/dts/arm/nordic/nrf52840.dtsi:559 */
 		};
 
@@ -558,34 +558,34 @@
 				write-block-size = < 0x4 >;    /* in zephyr/dts/arm/nordic/nrf52840.dtsi:432 */
 				reg = < 0x0 0x100000 >;        /* in zephyr/dts/arm/nordic/nrf52840_qiaa.dtsi:11 */
 
-				/* node '/soc/flash-controller@4001e000/flash@0/partitions' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:38 */
+				/* node '/soc/flash-controller@4001e000/flash@0/partitions' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:21 */
 				partitions {
-					compatible = "fixed-partitions"; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:39 */
-					#address-cells = < 0x1 >;        /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:40 */
-					#size-cells = < 0x1 >;           /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:41 */
+					compatible = "fixed-partitions"; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:22 */
+					#address-cells = < 0x1 >;        /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:23 */
+					#size-cells = < 0x1 >;           /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:24 */
 
-					/* node '/soc/flash-controller@4001e000/flash@0/partitions/partition@0' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:43 */
+					/* node '/soc/flash-controller@4001e000/flash@0/partitions/partition@0' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:26 */
 					boot_partition: partition@0 {
-						label = "mcuboot";    /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:44 */
-						reg = < 0x0 0xc000 >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:45 */
+						label = "mcuboot";    /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:27 */
+						reg = < 0x0 0xc000 >; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:28 */
 					};
 
-					/* node '/soc/flash-controller@4001e000/flash@0/partitions/partition@c000' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:48 */
+					/* node '/soc/flash-controller@4001e000/flash@0/partitions/partition@c000' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:31 */
 					slot0_partition: partition@c000 {
-						label = "image-0";        /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:49 */
-						reg = < 0xc000 0x76000 >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:50 */
+						label = "image-0";        /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:32 */
+						reg = < 0xc000 0x76000 >; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:33 */
 					};
 
-					/* node '/soc/flash-controller@4001e000/flash@0/partitions/partition@82000' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:53 */
+					/* node '/soc/flash-controller@4001e000/flash@0/partitions/partition@82000' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:36 */
 					slot1_partition: partition@82000 {
-						label = "image-1";         /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:54 */
-						reg = < 0x82000 0x76000 >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:55 */
+						label = "image-1";         /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:37 */
+						reg = < 0x82000 0x76000 >; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:38 */
 					};
 
-					/* node '/soc/flash-controller@4001e000/flash@0/partitions/partition@f8000' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:58 */
+					/* node '/soc/flash-controller@4001e000/flash@0/partitions/partition@f8000' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:41 */
 					storage_partition: partition@f8000 {
-						label = "storage";        /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:59 */
-						reg = < 0xf8000 0x8000 >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:60 */
+						label = "storage";        /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:42 */
+						reg = < 0xf8000 0x8000 >; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:43 */
 					};
 				};
 			};
@@ -631,14 +631,14 @@
 			interrupts = < 0x23 0x1 >;      /* in zephyr/dts/arm/nordic/nrf52840.dtsi:476 */
 			max-frequency = < 0x7a1200 >;   /* in zephyr/dts/arm/nordic/nrf52840.dtsi:477 */
 			easydma-maxcnt-bits = < 0x10 >; /* in zephyr/dts/arm/nordic/nrf52840.dtsi:478 */
-			status = "okay";                /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:149 */
-			pinctrl-0 = < &spi2_default >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:150 */
-			pinctrl-1 = < &spi2_sleep >;    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:151 */
+			status = "okay";                /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:149 */
+			pinctrl-0 = < &spi2_default >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:150 */
+			pinctrl-1 = < &spi2_sleep >;    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:151 */
 			pinctrl-names = "default",
-			                "sleep";        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:152 */
-			cs-gpios = < &gpio0 0x1d 0x0 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:153 */
-			compatible = "nordic,nrf-spi";  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:154 */
-			phandle = < 0x9 >;              /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:26 */
+			                "sleep";        /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:152 */
+			cs-gpios = < &gpio0 0x1d 0x0 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:153 */
+			compatible = "nordic,nrf-spi";  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:154 */
+			phandle = < 0x9 >;              /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:26 */
 		};
 
 		/* node '/soc/rtc@40024000' defined in zephyr/dts/arm/nordic/nrf52840.dtsi:482 */
@@ -672,11 +672,11 @@
 			num-out-endpoints = < 0x7 >;    /* in zephyr/dts/arm/nordic/nrf52840.dtsi:507 */
 			num-isoin-endpoints = < 0x1 >;  /* in zephyr/dts/arm/nordic/nrf52840.dtsi:508 */
 			num-isoout-endpoints = < 0x1 >; /* in zephyr/dts/arm/nordic/nrf52840.dtsi:509 */
-			status = "okay";                /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:160 */
+			status = "okay";                /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:61 */
 
-			/* node '/soc/usbd@40027000/cdc_acm_uart0' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:161 */
+			/* node '/soc/usbd@40027000/cdc_acm_uart0' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:62 */
 			cdc_acm_uart0: cdc_acm_uart0 {
-				compatible = "zephyr,cdc-acm-uart"; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:162 */
+				compatible = "zephyr,cdc-acm-uart"; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:63 */
 			};
 		};
 
@@ -732,8 +732,8 @@
 			#gpio-cells = < 0x2 >;                       /* in zephyr/dts/arm/nordic/nrf52840.dtsi:556 */
 			port = < 0x0 >;                              /* in zephyr/dts/arm/nordic/nrf52840.dtsi:558 */
 			gpiote-instance = < &gpiote >;               /* in zephyr/dts/arm/nordic/nrf52840.dtsi:559 */
-			status = "okay";                             /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:147 */
-			phandle = < 0x4 >;                           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:122 */
+			status = "okay";                             /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:49 */
+			phandle = < 0x4 >;                           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:122 */
 		};
 
 		/* node '/soc/gpio@50000300' defined in zephyr/dts/arm/nordic/nrf52840.dtsi:562 */
@@ -745,7 +745,7 @@
 			ngpios = < 0x10 >;                           /* in zephyr/dts/arm/nordic/nrf52840.dtsi:568 */
 			port = < 0x1 >;                              /* in zephyr/dts/arm/nordic/nrf52840.dtsi:570 */
 			gpiote-instance = < &gpiote >;               /* in zephyr/dts/arm/nordic/nrf52840.dtsi:571 */
-			status = "okay";                             /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:155 */
+			status = "okay";                             /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:57 */
 		};
 
 		/* node '/soc/crypto@5002a000' defined in zephyr/dts/arm/nordic/nrf52840.dtsi:574 */
@@ -764,42 +764,47 @@
 	pinctrl: pin-controller {
 		compatible = "nordic,nrf-pinctrl"; /* in zephyr/dts/vendor/nordic/nrf_common.dtsi:31 */
 
-		/* node '/pin-controller/i2c0_default' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:176 */
+		/* node '/pin-controller/i2c0_default' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:68 */
 		i2c0_default: i2c0_default {
-			phandle = < 0x2 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:69 */
+			phandle = < 0x2 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:69 */
 
-			/* node '/pin-controller/i2c0_default/group1' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:177 */
+			/* node '/pin-controller/i2c0_default/group1' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:69 */
 			group1 {
 				psels = < 0xb000015 >,
-				        < 0xc000016 >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:178 */
+				        < 0xc000016 >; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:70 */
 			};
 		};
 
-		/* node '/pin-controller/i2c0_sleep' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:182 */
+		/* node '/pin-controller/i2c0_sleep' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:74 */
 		i2c0_sleep: i2c0_sleep {
-			phandle = < 0x3 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:70 */
+			phandle = < 0x3 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:70 */
 
-			/* node '/pin-controller/i2c0_sleep/group1' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:183 */
+			/* node '/pin-controller/i2c0_sleep/group1' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:75 */
 			group1 {
-				psels = < 0xb000015 >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:184 */
+				psels = < 0xb000015 >; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:76 */
 			};
 		};
 
-		/* node '/pin-controller/spi2_default' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:188 */
+		/* node '/pin-controller/spi2_default' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:80 */
 		spi2_default: spi2_default {
-			phandle = < 0x5 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:150 */
+			phandle = < 0x5 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:150 */
 
-			/* node '/pin-controller/spi2_default/group1' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:189 */
+			/* node '/pin-controller/spi2_default/group1' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:81 */
 			group1 {
 				psels = < 0x500002c >,
 				        < 0x400002d >,
-				        < 0x600000e >; /* in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:190 */
+				        < 0x600000e >; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:82 */
 			};
 		};
 
-		/* node '/pin-controller/spi2_sleep' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:196 */
+		/* node '/pin-controller/spi2_sleep' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:88 */
 		spi2_sleep: spi2_sleep {
-			phandle = < 0x6 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:151 */
+			phandle = < 0x6 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:151 */
+
+			/* node '/pin-controller/spi2_sleep/group1' defined in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:89 */
+			group1 {
+				psels = < 0x500002c >; /* in ../../Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts:90 */
+			};
 		};
 	};
 
@@ -852,49 +857,49 @@
 		};
 	};
 
-	/* node '/buttons' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:18 */
-	buttons {
-		compatible = "gpio-keys"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:43 */
+	/* node '/mipi_dbi' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:21 */
+	mipi_dbi {
+		compatible = "zephyr,mipi-dbi-spi"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:22 */
+		status = "okay";                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:23 */
+		reset-gpios = < &gpio0 0x12 0x0 >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:24 */
+		dc-gpios = < &gpio0 0x1e 0x0 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:25 */
+		spi-dev = < &spi2 >;                /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:26 */
+		write-only;                         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:27 */
+		#address-cells = < 0x1 >;           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:28 */
+		#size-cells = < 0x0 >;              /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:29 */
 
-		/* node '/buttons/button_0' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:20 */
-		button0: button_0 {
-			label = "navigation button"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:45 */
-			gpios = < &gpio0 0x10 0x0 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:46 */
-		};
-
-		/* node '/buttons/button_1' defined in ../../Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts:25 */
-		button1: button_1 {
-			label = "tft_backlight button"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:50 */
-			gpios = < &gpio0 0xf 0x0 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:51 */
-		};
-
-		/* node '/buttons/button_2' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:53 */
-		button2: button_2 {
-			label = "rtcc clkoe button";   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:54 */
-			gpios = < &gpio0 0x1f 0x200 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:55 */
+		/* node '/mipi_dbi/gc9a01@0' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:31 */
+		gc9a01: gc9a01@0 {
+			status = "okay";                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:32 */
+			compatible = "galaxycore,gc9x01x";  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:33 */
+			reg = < 0x0 >;                      /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:34 */
+			mipi-max-frequency = < 0x5f5e100 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:35 */
+			pixel-format = < 0x10 >;            /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:36 */
+			width = < 0xf0 >;                   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:37 */
+			height = < 0xf0 >;                  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:38 */
 		};
 	};
 
-	/* node '/mipi_dbi' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:21 */
-	mipi_dbi {
-		compatible = "zephyr,mipi-dbi-spi"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:22 */
-		status = "okay";                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:23 */
-		reset-gpios = < &gpio0 0x12 0x0 >;  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:24 */
-		dc-gpios = < &gpio0 0x1e 0x0 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:25 */
-		spi-dev = < &spi2 >;                /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:26 */
-		write-only;                         /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:27 */
-		#address-cells = < 0x1 >;           /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:28 */
-		#size-cells = < 0x0 >;              /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:29 */
+	/* node '/buttons' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:42 */
+	buttons {
+		compatible = "gpio-keys"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:43 */
 
-		/* node '/mipi_dbi/gc9a01@0' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:31 */
-		gc9a01: gc9a01@0 {
-			status = "okay";                    /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:32 */
-			compatible = "galaxycore,gc9x01x";  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:33 */
-			reg = < 0x0 >;                      /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:34 */
-			mipi-max-frequency = < 0x5f5e100 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:35 */
-			pixel-format = < 0x10 >;            /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:36 */
-			width = < 0xf0 >;                   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:37 */
-			height = < 0xf0 >;                  /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306_nrf52840.overlay:38 */
+		/* node '/buttons/button_0' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:44 */
+		button0: button_0 {
+			label = "navigation button"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:45 */
+			gpios = < &gpio0 0x10 0x0 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:46 */
+		};
+
+		/* node '/buttons/button_1' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:49 */
+		button1: button_1 {
+			label = "tft_backlight button"; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:50 */
+			gpios = < &gpio0 0xf 0x0 >;     /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:51 */
+		};
+
+		/* node '/buttons/button_2' defined in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:53 */
+		button2: button_2 {
+			label = "rtcc clkoe button";   /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:54 */
+			gpios = < &gpio0 0x1f 0x200 >; /* in ../../Documents/watch_project/firmware/build/firmware/zephyr/boards/sw/ninab306/ninab306.overlay:55 */
 		};
 	};
 };

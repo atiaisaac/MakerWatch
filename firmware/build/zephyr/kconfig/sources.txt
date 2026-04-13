@@ -1,9 +1,9 @@
+/home/atia/Documents/watch_project/firmware/boards/sw/ninab306/Kconfig.ninab306
 /home/atia/Documents/watch_project/firmware/build/Kconfig/Kconfig.sysbuild.modules
 /home/atia/Documents/watch_project/firmware/build/Kconfig/boards/Kconfig.ninab306
 /home/atia/Documents/watch_project/firmware/build/Kconfig/boards/Kconfig.sysbuild
 /home/atia/Documents/watch_project/firmware/build/Kconfig/soc/Kconfig.soc
 /home/atia/Documents/watch_project/firmware/build/Kconfig/soc/Kconfig.sysbuild
-/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/Kconfig.ninab306
 /home/atia/ncs/v3.2.1/nrf/soc/nordic/Kconfig.soc
 /home/atia/ncs/v3.2.1/nrf/soc/nordic/Kconfig.sysbuild
 /home/atia/ncs/v3.2.1/nrf/soc/nordic/common/vpr/Kconfig.sysbuild

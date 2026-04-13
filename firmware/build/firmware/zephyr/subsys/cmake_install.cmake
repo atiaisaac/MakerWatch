@@ -147,3 +147,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/usb/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/subsys/shell/cmake_install.cmake")
+endif()
+

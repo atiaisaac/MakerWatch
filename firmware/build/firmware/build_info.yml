@@ -5,7 +5,7 @@ cmake:
   board:
     name: 'ninab306'
     path:
-     - '/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306'
+     - '/home/atia/Documents/watch_project/firmware/boards/sw/ninab306'
     qualifiers: 'nrf52840'
     revision: ''
   devicetree:
@@ -14,8 +14,8 @@ cmake:
      - '/home/atia/ncs/v3.2.1/modules/lib/max32664c/dts/bindings'
      - '/home/atia/ncs/v3.2.1/zephyr/dts/bindings'
     files:
-     - '/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306.dts'
-     - 'boards/sw/ninab306/ninab306_nrf52840.overlay'
+     - '/home/atia/Documents/watch_project/firmware/boards/sw/ninab306/ninab306.dts'
+     - 'boards/sw/ninab306/ninab306.overlay'
     include-dirs:
      - '/home/atia/ncs/v3.2.1/nrf/include'
      - '/home/atia/ncs/v3.2.1/nrf/dts/common'
@@ -40,10 +40,10 @@ cmake:
      - '/home/atia/ncs/v3.2.1/zephyr/dts/arc'
      - '/home/atia/ncs/v3.2.1/zephyr/dts'
     user-files:
-     - 'boards/sw/ninab306/ninab306_nrf52840.overlay'
+     - 'boards/sw/ninab306/ninab306.overlay'
   kconfig:
     files:
-     - '/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/ninab306_defconfig'
+     - '/home/atia/Documents/watch_project/firmware/boards/sw/ninab306/ninab306_defconfig'
      - '/home/atia/Documents/watch_project/firmware/prj.conf'
      - '/home/atia/Documents/watch_project/firmware/build/firmware/zephyr/.config.sysbuild'
     user-files:

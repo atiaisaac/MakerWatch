@@ -1,3 +1,5 @@
+/home/atia/Documents/watch_project/firmware/boards/sw/ninab306/Kconfig.defconfig
+/home/atia/Documents/watch_project/firmware/boards/sw/ninab306/Kconfig.ninab306
 /home/atia/Documents/watch_project/firmware/build/firmware/Kconfig/Kconfig.dts
 /home/atia/Documents/watch_project/firmware/build/firmware/Kconfig/Kconfig.modules
 /home/atia/Documents/watch_project/firmware/build/firmware/Kconfig/Kconfig.shield
@@ -9,7 +11,6 @@
 /home/atia/Documents/watch_project/firmware/build/firmware/Kconfig/soc/Kconfig
 /home/atia/Documents/watch_project/firmware/build/firmware/Kconfig/soc/Kconfig.defconfig
 /home/atia/Documents/watch_project/firmware/build/firmware/Kconfig/soc/Kconfig.soc
-/home/atia/Documents/watch_project/nrf_firmware/boards/sw/ninab306/Kconfig.ninab306
 /home/atia/ncs/toolchains/43683a87ea/opt/zephyr-sdk/cmake/zephyr/Kconfig
 /home/atia/ncs/v3.2.1/modules/crypto/oberon-psa-crypto/Kconfig.oberon_psa_crypto
 /home/atia/ncs/v3.2.1/modules/debug/percepio/DFM/kernelports/Zephyr/Kconfig

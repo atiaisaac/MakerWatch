@@ -2,7 +2,7 @@
 
 cmake_minimum_required(VERSION 3.20.0)
 
-set(DTC_OVERLAY_FILE "${CMAKE_CURRENT_SOURCE_DIR}/ninab306_nrf52840.overlay")
+# set(DTC_OVERLAY_FILE "${CMAKE_CURRENT_SOURCE_DIR}/ninab306.overlay")
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(my_app)
