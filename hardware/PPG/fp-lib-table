@@ -1,0 +1,6 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "FIREFLY E2218") (type "KiCad") (uri "/home/atia/Documents/watch_project/custom_libs/footprints/FIREFLY E2218.pretty") (options "") (descr ""))
+	(lib (name "SFH-2703") (type "KiCad") (uri "/home/atia/Documents/watch_project/custom_libs/footprints/SFH-2703.pretty") (options "") (descr ""))
+	(lib (name "SFH-7015") (type "KiCad") (uri "/home/atia/Documents/watch_project/custom_libs/footprints/SFH-7015.pretty") (options "") (descr ""))
+)
