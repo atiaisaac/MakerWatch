@@ -1,5 +1,5 @@
 # MakerWatch
-![Image](https://github.com/atiaisaac/MakerWatch/blob/main/images/image_1.png)
+![Main board](https://github.com/atiaisaac/MakerWatch/blob/main/images/watch_front.png)
 
 ## About
 An open source smartwatch built by a maker for the maker community packed with interesting features and runs on the zephry RTOS
@@ -16,13 +16,16 @@ Outlined below is a breakdown of the hardware componenets considered for this de
 * __NPM1300__ single cell li-ion charger with power path managament. It also includes 2 buck converters capable of providing 200mA each and 3 LDOs. More than enough for our setup. When paired with the right nrf chipset, it can serve as a fuel guage as well.
 * __MAX86141__ an AFE for optical data acquisition. Paired with MAX32664
 * __MAX32664__ an ultra-low power biometric sensor hub with embedded firmware for heart rate monitoring and blood oxygen saturation measurement.
-* __LIS2DS12__ paired with MAX32664 to compensate for artifacts of motion required for proper HRM and SpO2 measurement.
+* __KX122__ paired with MAX32664 to compensate for artifacts of motion required for proper HRM and SpO2 measurement.
 * __FIREFLY E2218__ true green color for health monitoring i.e HRM and pulse oximetry
 * __SFH 7015__ hyper-red and infrared for HRM and pulse oximetry.
 * __SFH 2703__ is a photodiode for capturing reflected light needed by the HRM and SpO2 algorithm
 * 1.28'' round tft display with __GC9a01__ display driver
-* __RV-8523-C3__ crystal to serve as real time clock/calendar
+* __RV-8263-C8__ crystal to serve as real time clock/calendar
 * __USB-C__ interface for easy flashing of firmware for developers/makers
+
+The hardware setup is made up of two board stacked together back to back my a mezzinine connector. There is the main watch board and what I have dubbed the ppg board that has the leds for photoplethysemography.
+![PPG board](https://github.com/atiaisaac/MakerWatch/blob/main/images/ppg_front.png)
 
 ## Software
 The MakerWatch uses a usb-c as the main source of flashing new firmware. However, on the board, there are breakout pads that serve as Serial Wire Debug (SWD) interface for doing other cool stuff like ITM when paired with the right hardware programmer. In this version, wires will have to be soldered onto the pads before use.
